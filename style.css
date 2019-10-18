@@ -1,3 +1,6 @@
+
+/* Kitik Dan Saran */
+
 h4 {
 	font-family:Poppins;
 	letter-spacing: 2px;
@@ -15,12 +18,30 @@ table {
 	color:#4f4f4f;
 
 }
- 
+
 .input {
 	width: 250px;
 	height:25px;
 	border-radius: 2px;
 	border:1px solid grey;
+
+}
+
+.select {
+	width: 250px;
+	height:30px;
+	border-radius: 2px;
+	color:#4f4f4f;
+	border:1px solid #4f4f4f;;
+	font-family: Poppins;
+	font-size: 11px;
+	letter-spacing: 0.5px;
+
+}
+
+.option {
+	width: 250px;
+	height:30px;
 }
 
 .submit {
@@ -34,11 +55,18 @@ table {
 	border-radius: 2px;
 }
 
+.submit:hover {
+	background:#d9c5c5; 
+	transition: 0.3s;
+}
+
 .header {
 	width:100%;
 	height:400px;
 	background-image: url(asset/gambar/header.jpg);
 	background-size: cover;
+
+
 }
 
 .button {
@@ -55,12 +83,81 @@ table {
 
 }
 
+.button:hover {
+	background:#ebebeb;
+	transition: 0.3s;
+}
+
+.submit-button {
+	width: 150px;
+	height: 32px;
+	background-color:#B59F9F;
+	border: none;
+	border-radius: 2px;
+	font-family: Poppins;
+	font-size:12px;
+	padding: 6px;
+	color:#fff;
+	opacity: 0.80;
+
+}
+
+.submit-button:hover {
+	background:#917c7c;
+	transition: 0.3s;
+}
+
 .title-header {
 	font-size:16px;
 	font-family: Poppins;
 	letter-spacing: 1px;
 	color:white;
 	padding:120px 10px 10px 50px;
+	clear: both;
+}
+
+/* Responsive Menu */
+
+.togle {
+	width: 100%;
+	padding: 10px 20px;
+	box-sizing: border-box;
+	background: white;
+	opacity: 0.75;
+	display: none;
+	text-align: center;
+}
+
+/*.togle a:hover {
+  background-color: white;
+  color: red;
+}
+
+.togle a.active {
+  background-color: #4CAF50;
+  color: white;
+}*/
+
+@media screen and (max-width: 620px)
+{
+	.togle {
+		display: block;
+		float: center;
+		
+	}
+
+	.menu {
+		/*display: none;*/
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		background: #333;
+		top: 45px;
+	}
+
+	.menu ul {
+		display: block;
+	}
 
 }
 
@@ -72,57 +169,120 @@ table {
 	height:12%;
 	background:white;
 	opacity: 0.75;
+
+}
+
+.sub-menu-1 {
+	display: none;
+	
 }
 
 .menu ul li {
-	display: inline;
-	margin:35px;
+	transition-duration: 0.5s;
+	margin:0px 10px 0px 50px;
+
+
+	
+}
+
+.menu ul li ul li{
+	margin:0px 0px 0px 0px;
+
+}
+
+.menu ul li:hover .sub-menu-1 {
+	width: 15%;
+	display: block;
+	position: absolute;
+	background: white;
+
+}
+
+.menu ul li:hover .sub-menu-1 ul {
+	display: block;
+
+}
+
+.menu ul li:hover .sub-menu-1 li{
+	border-bottom: 1px dotted #fff;
+	width: 100%;
+	padding: 12px;
 
 }
 
 .menu ul {
-	text-align:right;
-	padding-top:15px;
+	display: flex;
+	list-style: none;
+	padding:15px 0px 0px 0px;
+	width:100%;
+
 }
 
 .menu a {
 	text-decoration: none;
-	display: inline;
 	color:#4f4f4f;
 	letter-spacing: 1px;
+
+}
+
+.menu a:hover:after {
+  	width: 100%;
+
 }
 
 .menu a:hover {
 	opacity: 0.6;
-  	transition: 0.3s;
+  	transition: 0.5s;
+}
+
+.menu a:after {
+	content: '';
+    width: 0px;
+    height: 1px;
+    display: block;
+    background: #9c9c9c;
+    transition: 500ms;
+
 }
 
 .content-footer {
 	width:100%;
-	height:400px;
+	height:100%;
 	background: #4f4f4f;
 	font-size:11px;
 	font-family:Poppins;
 	color:white;
 	letter-spacing: 1px;
+	clear: both;
 
 }
 
 .hr-content-footer {
 	width:95%;
+
 }
 
 .title-content-footer {
-	padding:20px 100px 80px 50px;
+	width: 30%;
+	padding:30px 0px 10px 35px;
 	float:left;
+
+}
+
+.title-content-footer-2 {
+	width: 15%;
+	float: left;
+	margin:55px 0px 25px 25px;
+
 }
 
 .vl {
 	border-left: 3px solid white;
 	float: left;
 	height: 230px;
-	padding:0px 0px 0px 100px;
+	padding:0px 0px 0px 0px;
 	margin:50px 0px 0px 0px;
+
 }
 
 .footer {
@@ -134,5 +294,423 @@ table {
 	text-align:right;
 	padding-top: 10px;
 	color:#4f4f4f;
+
 }
 
+/* Beranda */
+
+.ini-berita {
+	width: 100%;
+}
+
+.content-index {
+	width:100%;
+	text-align: center;
+	transition: transform .5s;
+	
+}
+
+.content-index img {
+	transition: transform .5s;
+
+}
+
+.content-index img:hover {
+	transform: scale(1.1);
+
+}
+
+.img-index {
+	width:250px;
+	height:auto;
+	margin:0px 39px 0px 35px; /* Bawah, Kanan, Atas, Kiri */
+	box-shadow: 0px 8px 10px -6px black;
+}
+
+.content-article-index {
+	text-align: justify;
+  	text-justify: inter-word;
+
+}
+
+.content-article-index img{
+	width:180px;
+	height: auto;
+	float: left;
+	margin-right: 30px; 
+	box-shadow: 0px 8px 6px -6px black;
+
+}
+
+.article-index {
+	width:45%;
+	font-family: Poppins;
+	font-size: 12px;
+	float: left;
+	padding:30px 20px 30px 40px;
+
+}
+
+.button-article {
+	width: 250px;
+	height: 35px;
+	background-color:#737373;
+	border: none;
+	border-radius: 2px;
+	font-family: Poppins;
+	font-size:12px;
+	padding: 4px;
+	color:white;
+	opacity: 0.80;
+
+}
+
+.button-article:hover {
+	background-color:#454545;
+	transition: 0.3s;
+
+}
+
+.title-article-index {
+	width:30%;
+	font-family: Poppins;
+	font-size: 12px;
+	padding:0px 20px 50px 23px;
+	text-align: justify;
+  	text-justify: inter-word;
+  	float: left;
+  	
+}
+
+.title-article-index img {
+	float: left;
+	margin:0px 30px 0px 10px;
+}
+
+.title-article-index label h3 {
+	margin:8px 0px 0px 0px;
+	color:#4f4f4f;
+
+}
+
+/* Detail Berita */
+
+.header-detail {
+	font-family: Poppins;
+	font-size: 12px;
+	margin: -20px 0px 30px 0px;
+
+}
+
+.header-detail img{
+	width:90%;
+	height: 400px;
+	object-fit: cover;
+	background-size: cover;
+
+}
+
+.hr-detail {
+	width: 12%;
+	float: left;
+	margin: -10px 0px 20px 0px;
+
+}
+
+.article-detail {
+	width: 90%;
+	font-family: Poppins;
+	font-size: 12px;
+	margin: -30px 0px 30px 65px;
+	text-align: justify;
+  	text-justify: inter-word;
+
+}
+
+.article-detail img {
+	width: 50%;
+	height: 400px;
+	object-fit: cover;
+	margin: 0px 0px 30px 0px;
+	box-shadow: 0px 10px 6px -6px black;
+
+}
+
+/* Fasilitas */
+
+.content-fasility{
+
+}
+
+.content-fasilitas {
+	width: 30.4%;
+	font-family: Poppins;
+	font-size: 12px;
+	line-height: 1.1;
+	margin: 0px 80px 40px 145px;
+	float: left;
+	justify-content: center;
+
+}
+
+.content-fasilitas label {
+	text-align: center;
+
+}
+
+.content-fasilitas img{
+	width: 400px;
+	height: 350px;
+	object-fit: cover;
+	box-shadow: 0px 10px 6px -6px black;
+	transition: transform .5s;
+
+}
+
+.content-fasilitas img:hover {
+	transform: scale(1.1);
+
+}
+
+/* Detail Fasilitas */
+
+.content-dfasility {
+	width: 95%;
+	font-family: Poppins;
+	font-size: 14px;
+	color:#4f4f4f;
+	text-align: justify;
+  	text-justify: inter-word;
+
+}
+
+.content-dfasility img {
+	width: 400px;
+	height: 350px;
+	object-fit: cover;
+	box-shadow: 0px 10px 6px -6px black;
+	margin: 0px 50px 60px 65px;
+	float: left;
+
+}
+
+.img-dfasility {
+	clear: both;
+	padding:0px 0px 50px 0px;
+	
+}
+
+.img-dfasility img {
+	transition: transform .5s; 
+
+}
+
+.img-dfasility img:hover {
+	transform: scale(1.1);
+
+}
+
+.article-dfasility {
+	font-family: Poppins;
+	font-size: 13px;
+	padding: 0px 30px 0px 30px;
+	text-align: justify;
+  	text-justify: inter-word;
+
+}
+
+/* Fasilitas Kamar */
+
+.title-fasility-bed {
+	font-family: Poppins;
+	font-size: 12px;
+	padding: 0px 0px 30px 50px;
+
+}
+
+.title-fasility-bed input{
+	width: 245px;
+	height: 20px;
+	border: 0px;
+	text-decoration: underline;
+	border-bottom: 1px solid #CCC;
+	float: right;
+	margin: -50px 50px 0px 0px;
+
+}
+
+::placeholder {
+	font-family: Poppins;
+	font-size: 11px;
+	color:#4f4f4f;
+
+}
+
+/* Detail Kamar */
+
+.img-content-bed {
+	clear:both;
+
+}
+
+.img-content-bed img {
+	margin: 0px 0px 70px 100px;
+	width: 300px;
+	height: 300px;
+	object-fit: cover;
+	box-shadow: 0px 10px 6px -6px black;
+	
+}
+
+.isi-sejarah {
+	width: 90%;
+	font-family: Poppins;
+	font-size: 13px;
+	padding: 0px 0px 0px 65px;
+	text-align: justify;
+  	text-justify: inter-word;
+}
+
+.isi-sejarah img {
+	width: 300px;
+	height: 300px;
+	object-fit: cover;
+	box-shadow: 0px 10px 6px -6px black;
+
+}
+
+.visi-misi {
+	font-family: Poppins;
+	font-size: 13px;
+	width: 40%;
+	float: left;
+	margin: 10px 0px 30px 85px;
+
+}
+
+/* Lihat Dokter */
+
+.artivle-view-doctor {
+	width: 90%;
+}
+
+.table-head-view-doctor {
+	width: 88%;
+	height:18px;
+	background: #04C7E6;
+	font-family: Poppins;
+	font-size: 13px;
+	color: white;
+	margin:0 auto;
+	padding: 15px;
+}
+
+.table-head-view-doctor label {
+	margin:0px 0px 0px 40px;
+
+}
+
+.table-body-view-doctor label {
+	color:#4f4f4f;
+	font-family: Poppins;
+	font-size: 13px;
+	margin:0px 0px 0px 100px;
+
+}
+
+.button-view-doctor {
+	margin:30px 0px 30px 68%;
+
+}
+
+/* Lihat Dokter */
+
+.table-detail-doctor {
+	width: 90%;
+	font-family:Poppins;
+	font-size:12px;
+	color:#fff;
+	margin: 0 auto;
+}
+
+.table-detail-doctor tr th {
+	background: #04C7E6;
+	letter-spacing: 1px;
+
+}
+
+.table-detail-doctor tr td {
+	color: #7a7a7a;
+
+}
+
+.table-detail-doctor tr:nth-child(even){
+	background: #f2f2f2;
+
+}
+
+/* Profil Doctor */
+
+.content-profil-doctor {
+	margin-left: 80px;
+}
+
+.article-profil-doctor {
+	width: 35%;
+	font-family: Poppins;
+	font-size: 13px;
+	color:#4f4f4f;
+	float: left;
+	margin: 0px 0px 25px 65px;
+}
+
+.article-profil-doctor img {
+	width: 300px;
+	height: 300px;
+	object-fit: cover;
+	box-shadow: 0px 10px 6px -6px #4f4f4f;
+	margin: 0px 0px 0px 85px;
+	border-radius: 100%;
+}
+
+.article-profil-doctor label p{
+	margin: 0px 0px 13px 20px;
+}
+
+.vl-article-view-doctor {
+	border-left: 3px solid #4f4f4f;
+	float: left;
+	height: 470px;
+	padding:0px 0px 0px 30px;
+	margin:0px 45px 0px 0px;
+
+}
+
+.article-list-dokter {
+	width: 28%;
+	font-family: Poppins;
+	font-size: 13px;
+	color:#4f4f4f;
+	float: left;
+	margin:0px 0px 40px 52px;
+	border: 1px solid #dedede;
+	border-radius: 10px;
+
+}
+
+.article-list-dokter img{
+	width: 300px;
+	height: 300px;
+	object-fit: cover;
+	text-align: center;
+	border-radius: 100%;
+	margin: auto;
+	display: block;
+	margin-bottom:50px;
+	margin-top:25px;
+	box-shadow: 0px 10px 6px -6px #4f4f4f;
+}
+
+.article-list-dokter p{
+	margin-left: 35px;
+}
