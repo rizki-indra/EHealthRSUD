@@ -51,7 +51,7 @@
 	<h4><center>SELAMAT DATANG DI WEBSITE RUMAH SAKIT UMUM DR SOEBANDI</center></h4>
 	<hr>
 
-	<form name="myForm" method="POST" action="inputPasien.html" onsubmit="return validateForm()">
+	<form name="myForm" method="GET" action="inputPasien.html" onsubmit="return validateForm()">
 	<div class="content-login">
 		<h4><center>LOGIN ADMIN</center></h4>
 
@@ -193,11 +193,6 @@
 
 		  else if (password == "") {
 		    alert("Password Harus Di Isi");
-		    return false;
-		  }
-
-		  else if (username != "admin" && password != "admin") {
-		    alert("Username & Password Salah");
 		    return false;
 		  }
 		}
