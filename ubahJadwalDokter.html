@@ -4,9 +4,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-	<script
-  src="https://code.jquery.com/jquery-3.4.1.js"></script>
-	<title>Kritik Dan Saran</title>
+	<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+	<title>Ubah Jadwal Dokter</title>
 </head>
 <body>
 
@@ -17,6 +16,20 @@
 
 		<div class="menu">
 				<ul>
+					<li class="sub-menu"><a href="#">Admin</a>
+						<div class="sub-menu-1">
+							<ul>
+								<li><a href="inputPasien.html">Input Pasien</a></li>
+								<li><a href="dataPasien.html">Data Pasien</a></li>
+								<li><a href="inputJadwalDokter.html">Input Jadwal Dokter</a></li>
+								<li><a href="dataJadwalDokter.html">Data Jadwal Dokter</a></li>
+								<li><a href="inputDokter.html">Input Data Dokter</a></li>
+								<li><a href="dataDokter.html">Data Dokter</a></li>
+								<li><a href="inputBerita.html">Input Berita</a></li>
+								<li><a href="dataBerita.html">Data Berita</a></li>
+							</ul>
+						</div>
+					</li>
 					<li><a href="index.html" class="active">Beranda</a></li>
 					<li class="sub-menu"><a href="#">Profil</a>
 							<ul>
@@ -38,8 +51,10 @@
 							</ul>
 					</li>
 					<li><a href="kritikSaran.html">Kritik Dan Saran</a></li>
+					<li><a href="Login.html">Logout</a></li>
 				</ul>
 		</div>
+
 		<div class="title-header">
 			SELAMAT DATANG<br>
 			DI RUMAH SAKIT UMUM DR SOEBANDI KABUPATEN JEMBER<br>
@@ -47,7 +62,7 @@
 		</div>
 	</div>
 
-	<h4><center>INPUT ANTRIAN RSUD DR SOEBANDI</center></h4>
+	<h4><center>UBAH JADWAL RSUD DR SOEBANDI</center></h4>
 		<hr><br>
 
 	<div class="content">
@@ -55,41 +70,49 @@
 		<table align="center" cellpadding="10">
 			<tr>
 				<td>
-					<label> Nama Anda </label> </td>
+					<label> Kode Dokter </label> </td>
 				<td>
-					<input type="text" name="" class="input" required=""> </td>
+					<input type="number" name="" class="input" required=""> </td>
 			</tr>
 
 			<tr>
 				<td>
-					<label> Email Anda </label><br> </td>
+					<label> Nama Dokter </label><br> </td>
 				<td>
 					<input type="text" name=""class="input" required=""><br>
-					<label2 style="font-family:Poppins;font-size:10px;color:#cccccc;letter-spacing: 1px;"><i> Gunakan Email Aktif </i></label2> </td>
+					
 			</tr>
 
 			<tr>
 				<td>
-					<label> Kritik Dan Saran </label> </td>
+					<label> Jadwal Dokter </label> </td>
 				<td>
-					<textarea required=""></textarea></td>
+					<input type="time" name=""class="input" required=""></td>
+
 			</tr>
 
 			<tr>
 				<td>
-					<label> Kualitas Pelayanan </label> </td>
+					<label> Jadwal Dokter Akhir</label> </td>
 				<td>
-					<input type="radio" name="sifat" value="a">Buruk<br>
-					<input type="radio" name="sifat" value="b">Cukup<br>
-					<input type="radio" name="sifat" value="c">Cukup Baik<br>
-					<input type="radio" name="sifat" value="d">Baik Sekali<br>
-					<input type="radio" name="sifat" value="e">Sangat Memuaskan<br></td>
-			</tr>
+					<input type="time" name=""class="input" required=""></td>
 
 			<tr>
-				<td></td><td><input type="submit" value="SIMPAN" class="submit"></td>
+				<td>
+					<label> Ruangan </label><br> </td>
+				<td>
+					<input type="text" name="" class="input" required=""><br>
+					
 			</tr>
+
+
+			</tr>
+
+			
+			<td></td><td><input type="submit" value="UBAH" class="submit" onclick="location.href='dataJadwalDokter.html';"></td>
+					</td>
 		</table> 
+
 
 	<div class="content-footer">
 		<div class="title-content-footer">

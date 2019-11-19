@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+	<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+	<title>Input Dokter</title>
+</head>
+<body>
+	<form class="" action="dataDokter.html" method="POST">
+	<div class="header">
+		<div class="menu-togle">
+			<i class="fa fa-bars"></i>
+		</div>
+
+		<div class="menu">
+				<ul>
+					<li class="sub-menu"><a href="#">Admin</a>
+						<div class="sub-menu-1">
+							<ul>
+								<li><a href="inputPasien.html">Input Pasien</a></li>
+								<li><a href="dataPasien.html">Data Pasien</a></li>
+								<li><a href="inputJadwalDokter.html">Input Jadwal Dokter</a></li>
+								<li><a href="dataJadwalDokter.html">Data Jadwal Dokter</a></li>
+								<li><a href="inputDokter.html">Input Data Dokter</a></li>
+								<li><a href="dataDokter.html">Data Dokter</a></li>
+								<li><a href="inputBerita.html">Input Berita</a></li>
+								<li><a href="dataBerita.html">Data Berita</a></li>
+							</ul>
+						</div>
+					</li>
+					<li><a href="index.html" class="active">Beranda</a></li>
+					<li class="sub-menu"><a href="#">Profil</a>
+							<ul>
+								<li><a href="listDokter.html">Profil Dokter</a></li>
+								<li><a href="visiMisi.html">Visi & Misi</a></li>
+								<li><a href="sejarah.html">Sejarah RSUD Dr Soebandi</a></li>
+							</ul>
+					</li>
+					<li class="sub-menu"><a href="#">Jadwal</a>
+							<ul>
+								<li><a href="cariDokter.html">Jadwal Dokter</a></li>
+							</ul>
+					</li>
+					<li class="sub-menu"><a href="#">Fasilitas</a>
+							<ul>
+								<li><a href="fasilitas.html">Fasilitas Rumah Sakit</a></li>
+								<li><a href="fasilitasKamar.html">Fasilitas Kamar</a></li>
+								<li><a href="fasilitasLab.html">Fasilitas Laboraturium</a></li>
+							</ul>
+					</li>
+					<li><a href="kritikSaran.html">Kritik Dan Saran</a></li>
+					<li><a href="Login.html">Logout</a></li>
+				</ul>
+		</div>
+
+		<div class="title-header">
+			SELAMAT DATANG<br>
+			DI RUMAH SAKIT UMUM DR SOEBANDI KABUPATEN JEMBER<br>
+			<button href="index.html" class="button">Lihat Selengkapnya</button>
+		</div>
+	</div>
+
+	<h4><center>INPUT DOKTER RSUD DR SOEBANDI</center></h4>
+		<hr><br>
+
+	<div class="content">
+
+		<table align="center" cellpadding="10">
+			<tr>
+				<td>
+					<label> Kode Dokter </label> </td>
+				<td>
+					<input type="text" name="" value="KD0111" id="kode" class="input" disabled=""> </td>
+			</tr>
+
+			<tr>
+				<td>
+					<label> Nama Dokter </label><br> </td>
+				<td>
+					<input type="text" class="input" id="nama" required=""><br>
+					
+			</tr>
+
+			<tr>
+				<td>
+					<label> Tanggal Lahir </label> </td>
+				<td>
+					<input type="date" name="" class="input" id="ttl" required=""> </td>
+
+					
+			</tr>
+
+			<tr>
+				<td>
+					<label> Alamat </label> </td>
+				<td>
+					<textarea id="alamat" required=""></textarea></td>
+				
+			</tr>
+
+			<tr>
+				<td>
+					<label> Email </label><br> </td>
+				<td>
+					<input type="email" name=""class="input" id="email" required=""><br></td>
+
+			</tr>
+
+			<tr>
+				<td>
+					<label> Riwayat Pekerjaan </label><br> </td>
+				<td>
+					<input type="text" name=""class="input" id="pekerjaan" required=""><br>
+			</tr>
+
+			<tr>
+				<td>
+					<label> Riwayat Pendidikan </label><br> </td>
+				<td>
+					<input type="text" name=""class="input" id="pendidikan" required=""><br>
+			</tr>
+
+			<tr>
+				<td>
+					<label> Foto </label><br> 
+
+					<td><input type="file" value="Upload Foto" id="foto" class="file"></td>
+					</td>
+			</tr>
+
+			<td></td><td><button onclick="printForm()" type="button" id="btnvalidate" class="submit-button">SIMPAN</td>
+		</table> 
+	</div>
+
+	<hr>
+
+	<h4><center>DATA DOKTER RSUD DR SOEBANDI JEMBER</center></h4>
+	<table class="table-detail-doctor" id="table" cellpadding="10" align="center">
+
+			<thead>
+				<tr>
+					<th>No</th>
+					<th>Kode Dokter</th>
+					<th>Nama Dokter</th>
+					<th>Tanggal Lahir</th>
+					<th>Alamat</th>
+					<th>Email</th>
+					<th>Riwayat Pekerjaan</th>
+					<th>Riwayat Pendidikan</th>
+					<th>Foto</th>
+					<th colspan="3">Aksi</th>
+				</tr>
+			</thead>
+
+	</table><br><br>
+
+	<div class="content-footer">
+		<div class="title-content-footer">
+			<label><b>KONTAK KAMI</b></label><br><br>
+			<p><li>Gedung RSUD Soebandi <br>
+				   Lt 1 Kantor Gedung RSUD Soebandi <br>
+				   Jalan, Patrang No.3 <br>
+				   Jember 1070</li>
+			</p><br>
+			<p><li>Fax (021) 82330445809</p><br>
+			<p><li>Informasi Dan Bantuan<br>
+			   	   www.RSUD-Dr-Soebandi.rsud.gmail.com</li>
+			</p><br>
+			<p><li>Support Dan Bantuan<br>
+			   	   www.Support-Dr-Soebandi.rsud.gmail.com</li>
+			</p><br>
+		</div>
+
+		<div class="vl">
+
+		</div>
+
+		<div class="title-content-footer">
+
+			<label><b>BERITA TERKINI</b></label><br><br>
+			<p><li>Langganan BPJS RSUD Dr.Soebandi<br>
+			   	   Sekarang dipermudah</li><br>
+			<label style="font-size:10px;color:#E4D1D1;"><i>29 Agustus 2019</i></label>
+			</p><br>
+
+			<p><li>Langganan BPJS RSUD Dr.Soebandi<br>
+			   	   Sekarang dipermudah
+			</li><br>
+			<label style="font-size:10px;color:#E4D1D1;"><i>29 Agustus 2019</i></label>
+			</p><br>
+
+		</div>
+
+		<div class="vl">
+			
+		</div>
+
+		<div class="title-content-footer-2">
+			<p><a href="visiMisi.html"> Visi Misi </a></p>
+			<p><a href="profilDokter.html"> Profil Dokter </a></p>
+			<p><a href="sejarah.html"> Sejarah </a></p>
+		</div>
+
+		<div class="title-content-footer-2">
+			<p><a href="resultData.html"> Jadwal Dokter </a></p>
+			<p><a href="fasilitas.html"> Fasilitas Rumah Sakit </a></p>
+			<p><a href="kritikSaran.html"> Kritik Saran </a></p>
+		</div>
+
+		<hr class="hr-content-footer"><br>
+			<center>Rumah Sakit Umum Soebandi Jember</center><br>
+		<hr class="hr-content-footer"><br>
+	</div>
+
+	<div class="footer">
+		Copyright © 2019 Adobe. All rights reserved. / Privacy / Terms of Use / Cookies
+	</div>
+
+</body>
+</html>
+
+    <script>
+
+    	// Dropdown
+
+        $(function(){
+        	$(".menu-togle").click(function(){
+        		$(".menu").toggleClass("active");
+        		// $(".menu").next('ul').slideToggle();
+        	})
+        	
+        	$('ul li').click(function(){
+        		$(this).siblings().removeClass('active');	
+        		$(this).toggleClass('active');	
+        	})
+        })
+
+        var nomor=1;
+        var edit='<a href="ubahDokter.html">Edit';
+        var view='<a href="lihatDokter.html">View';
+        var deletee='<a href="hapusDokter.html">Delete';
+	function printForm(){
+		var inputKode = document.getElementById('kode');
+		var inputNama = document.getElementById('nama');
+		var inputTTL = document.getElementById('ttl');
+		var inputAlamat = document.getElementById('alamat');
+		var inputEmail = document.getElementById('email');
+		var inputPekerjaan = document.getElementById('pekerjaan');
+		var inputPendidikan = document.getElementById('pendidikan');
+		var inputFoto = document.getElementById('foto');
+		tambahData(inputKode.value, inputNama.value, inputTTL.value, inputAlamat.value, inputEmail.value, inputPekerjaan.value, inputPendidikan.value, inputFoto.value);
+			console.log(inputKode.value);
+			console.log(inputNama.value);
+			console.log(inputTTL.value);
+			console.log(inputAlamat.value);
+			console.log(inputEmail.value);
+			console.log(inputPekerjaan.value);
+			console.log(inputPendidikan.value);
+			console.log(inputFoto.value);
+
+	}
+
+	function tambahData(kode, nama, ttl, alamat, email, pekerjaan, pendidikan, foto) {
+		var table = document.getElementById('table');
+		var row = table.lastElementChild.insertRow();
+		var cellNomor = row.insertCell(0);	
+		var cellKode = row.insertCell(1);
+		var cellNama = row.insertCell(2);
+		var cellTTL = row.insertCell(3);
+		var cellAlamat = row.insertCell(4);
+		var cellEmail = row.insertCell(5);
+		var cellPekerjaan = row.insertCell(6);
+		var cellPendidikan = row.insertCell(7);
+		var cellFoto = row.insertCell(8);
+		var cellEdit = row.insertCell(9);
+		var cellView = row.insertCell(10);
+		var cellDelete = row.insertCell(11);
+
+		cellNomor.innerHTML = nomor++;
+		cellKode.innerHTML = kode;
+		cellNama.innerHTML = nama;
+		cellTTL.innerHTML = ttl;
+		cellAlamat.innerHTML = alamat;
+		cellEmail.innerHTML = email;
+		cellPekerjaan.innerHTML = pekerjaan;
+		cellPendidikan.innerHTML = pendidikan;
+		cellFoto.innerHTML = foto;
+		cellEdit.innerHTML = edit;
+		cellView.innerHTML = view;
+		cellDelete.innerHTML = deletee;
+
+	} 
+
+	$('#btnvalidate').click(function() {
+	  
+	    if(nama == '')
+	    {
+		  alert('Please enter your Full Name');
+		  $('#nama').focus(); //The focus function will move the cursor to "fullname" field
+	    }
+
+	    else if(genderr == '' && kk == '' && alamat == '' && telp == '' && asuransi == '' && Spesialis == '' && dokter == '') {
+		  alert('Please enter your Address');
+		  $('#genderr').focus();
+		  $('#kk').focus();
+		  $('#alamat').focus();
+		  $('#telp').focus();
+		  $('#asuransi').focus();
+		  $('#Spesialis').focus();
+		  $('#dokter').focus();
+
+	    }
+
+	    else {
+	    	alert('Pengisian Data Berhasil');
+
+	    }
+
+  	});
+    </script>

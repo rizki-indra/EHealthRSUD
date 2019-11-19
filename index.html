@@ -1,40 +1,41 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+	<script
+  src="https://code.jquery.com/jquery-3.4.1.js"></script>
 	<title>Beranda</title>
 </head>
 <body>
 
 	<div class="header">
+		<div class="menu-togle">
+			<i class="fa fa-bars"></i>
+		</div>
+
 		<div class="menu">
 				<ul>
-					<li><a href="index.html">Beranda</a></li>
-					<li><a href="#">Profil</a>
-						<div class="sub-menu-1">
+					<li><a href="index.html" class="active">Beranda</a></li>
+					<li class="sub-menu"><a href="#">Profil</a>
 							<ul>
 								<li><a href="listDokter.html">Profil Dokter</a></li>
 								<li><a href="visiMisi.html">Visi & Misi</a></li>
 								<li><a href="sejarah.html">Sejarah RSUD Dr Soebandi</a></li>
 							</ul>
-						</div>
 					</li>
-					<li><a href="#">Jadwal</a>
-						<div class="sub-menu-1">
+					<li class="sub-menu"><a href="#">Jadwal</a>
 							<ul>
 								<li><a href="cariDokter.html">Jadwal Dokter</a></li>
 							</ul>
-						</div>
 					</li>
-					<li><a href="#">Fasilitas</a>
-						<div class="sub-menu-1">
+					<li class="sub-menu"><a href="#">Fasilitas</a>
 							<ul>
 								<li><a href="fasilitas.html">Fasilitas Rumah Sakit</a></li>
 								<li><a href="fasilitasKamar.html">Fasilitas Kamar</a></li>
 								<li><a href="fasilitasLab.html">Fasilitas Laboraturium</a></li>
 							</ul>
-						</div>
 					</li>
 					<li><a href="kritikSaran.html">Kritik Dan Saran</a></li>
 				</ul>
@@ -43,12 +44,12 @@
 			<div class="title-header">
 				SELAMAT DATANG<br>
 				DI RUMAH SAKIT UMUM DR SOEBANDI KABUPATEN JEMBER<br>
-				<button onclick="window.location.href='#two'" class="button">Lihat Selengkapnya</button>
+				<button onclick="window.location.href='login.html'" class="button">LOGIN</button>
 			</div>
 	</div>
 
-		<h4><center>SELAMAT DATANG DI WEBSITE RUMAH SAKIT UMUM DR SOEBANDI</center></h4>
-			<hr><br>
+	<h4><center>SELAMAT DATANG DI WEBSITE RUMAH SAKIT UMUM DR SOEBANDI</center></h4>
+	<hr><br>
 
 	<div class="content-index">
 		<img class="img-index" src="asset/gambar/articleimage1.png">
@@ -105,8 +106,33 @@
 			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
 			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse</p>
 			<button class="button-article" onclick="window.location.href='detailBerita.html'">Lihat Selengkapnya</button>
+		</div>
+	</div>
+
+		<div class="article-index">
+		<div class="content-article-index">
+			<img src="asset/gambar/articleimage1.png">
+			<label class="label-index"> <b>BERITA TERBARU</b> </label><br>
+			<p>ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse</p>
+			<button class="button-article" onclick="window.location.href='detailBerita.html'">Lihat Selengkapnya</button>
+		</div>
+	</div>
+
+	<div class="article-index">
+		<div class="content-article-index">
+			<img src="asset/gambar/articleimage1.png">
+			<label class="label-index"> <b>BERITA TERBARU</b> </label><br>
+			<p>ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse</p>
+			<button class="button-article" onclick="window.location.href='detailBerita.html'">Lihat Selengkapnya</button>
 		</div><br><br>
 	</div>
+
 	</div>
 
 
@@ -179,15 +205,15 @@
 		</div>
 
 		<div class="title-content-footer-2">
-			<p>lorem</p>
-			<p>lorem</p>
-			<p>lorem</p>
+			<p><a href="visiMisi.html"> Visi Misi </a></p>
+			<p><a href="profilDokter.html"> Profil Dokter </a></p>
+			<p><a href="sejarah.html"> Sejarah </a></p>
 		</div>
 
 		<div class="title-content-footer-2">
-			<p>lorem</p>
-			<p>lorem</p>
-			<p>lorem</p>
+			<p><a href="resultData.html"> Jadwal Dokter </a></p>
+			<p><a href="fasilitas.html"> Fasilitas Rumah Sakit </a></p>
+			<p><a href="kritikSaran.html"> Kritik Saran </a></p>
 		</div>
 
 		<hr class="hr-content-footer"><br>
@@ -201,3 +227,26 @@
 
 </body>
 </html>
+    <script>
+
+        $(function(){
+        	$(".menu-togle").click(function(){
+        		$(".menu").toggleClass("active");
+        		// $(".menu").next('ul').slideToggle();
+        	})
+        	
+        	$('ul li').click(function(){
+        		$(this).siblings().removeClass('active');	
+        		$(this).toggleClass('active');	
+        	})
+        })
+    </script>
+
+    <!-- <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const nav = document.querySelector('nav');
+        menuToggle.addEventListener('click', () => {
+            if (nav.className != 'active') {nav.className = 'active';}
+            else {nav.className = '';}
+        });
+    </script> -->

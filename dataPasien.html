@@ -4,9 +4,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-	<script
-  src="https://code.jquery.com/jquery-3.4.1.js"></script>
-	<title>Kritik Dan Saran</title>
+	<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+	<title>Data Pasien</title>
 </head>
 <body>
 
@@ -17,6 +16,20 @@
 
 		<div class="menu">
 				<ul>
+					<li class="sub-menu"><a href="#">Admin</a>
+						<div class="sub-menu-1">
+							<ul>
+								<li><a href="inputPasien.html">Input Pasien</a></li>
+								<li><a href="dataPasien.html">Data Pasien</a></li>
+								<li><a href="inputJadwalDokter.html">Input Jadwal Dokter</a></li>
+								<li><a href="dataJadwalDokter.html">Data Jadwal Dokter</a></li>
+								<li><a href="inputDokter.html">Input Data Dokter</a></li>
+								<li><a href="dataDokter.html">Data Dokter</a></li>
+								<li><a href="inputBerita.html">Input Berita</a></li>
+								<li><a href="dataBerita.html">Data Berita</a></li>
+							</ul>
+						</div>
+					</li>
 					<li><a href="index.html" class="active">Beranda</a></li>
 					<li class="sub-menu"><a href="#">Profil</a>
 							<ul>
@@ -38,58 +51,70 @@
 							</ul>
 					</li>
 					<li><a href="kritikSaran.html">Kritik Dan Saran</a></li>
+					<li><a href="Login.html">Logout</a></li>
 				</ul>
 		</div>
+
 		<div class="title-header">
 			SELAMAT DATANG<br>
 			DI RUMAH SAKIT UMUM DR SOEBANDI KABUPATEN JEMBER<br>
-			<button href="index.html" class="button">Lihat Selengkapnya</button>
+			<button class="button" onclick="location.href='tampil.html';">Lihat Selengkapnya</button>
 		</div>
 	</div>
 
-	<h4><center>INPUT ANTRIAN RSUD DR SOEBANDI</center></h4>
-		<hr><br>
+	<h4><center>SELAMAT DATANG DI WEBSITE RUMAH SAKIT UMUM DR SOEBANDI</center></h4>
+		<hr>
 
-	<div class="content">
+	
+	<h4><center>DATA PASIEN RSUD DR SOEBANDI JEMBER</center></h4>
+	<table class="table-detail-doctor" cellpadding="10" align="center">
 
-		<table align="center" cellpadding="10">
+		<thead>
 			<tr>
-				<td>
-					<label> Nama Anda </label> </td>
-				<td>
-					<input type="text" name="" class="input" required=""> </td>
+				<th>No</th>
+				<th>Kode Pasien</th>
+				<th>Nama Pasien</th>
+				<th>Jenis Kelamin</th>
+				<th>Alamat</th>
+				<th>No Telepon</th>
+				<th>Pilih Spesialis</th>
+				<th>Pilih Dokter</th>
+				<th colspan="3">Aksi</th>
 			</tr>
+		</thead>
 
+		<tbody>
 			<tr>
-				<td>
-					<label> Email Anda </label><br> </td>
-				<td>
-					<input type="text" name=""class="input" required=""><br>
-					<label2 style="font-family:Poppins;font-size:10px;color:#cccccc;letter-spacing: 1px;"><i> Gunakan Email Aktif </i></label2> </td>
+				<td>1</td>
+				<td>01</td>
+				<td>Rizal Ganteng</td>
+				<td>Laki Laki</td>
+				<td>Toba Patrang, Indonesia</td>
+				<td>1111111</td>
+				<td>THT</td>
+				<td>Indra Ganteng</td>
+				<td><a href="ubahPasien.html">Edit</td>
+				<td><a href="#">View</td>
+				<td><a href="#">Delete</td>
 			</tr>
+		<tbody>
+			<tr>
+				<td>2</td>
+				<td>02</td>
+				<td>Bagas Ganteng</td>
+				<td>Laki Laki</td>
+				<td>08181818181</td>
+				<td>Mastrip Patrang, Indonesia</td>
+				<td>222222</td>
+				<td>1010101010</td>
+				<td><a href="ubahPasien.html">Edit</td>
+				<td><a href="#">View</td>
+				<td><a href="#">Delete</td>
+			</tr>
+		</tbody>
+		</tbody>
 
-			<tr>
-				<td>
-					<label> Kritik Dan Saran </label> </td>
-				<td>
-					<textarea required=""></textarea></td>
-			</tr>
-
-			<tr>
-				<td>
-					<label> Kualitas Pelayanan </label> </td>
-				<td>
-					<input type="radio" name="sifat" value="a">Buruk<br>
-					<input type="radio" name="sifat" value="b">Cukup<br>
-					<input type="radio" name="sifat" value="c">Cukup Baik<br>
-					<input type="radio" name="sifat" value="d">Baik Sekali<br>
-					<input type="radio" name="sifat" value="e">Sangat Memuaskan<br></td>
-			</tr>
-
-			<tr>
-				<td></td><td><input type="submit" value="SIMPAN" class="submit"></td>
-			</tr>
-		</table> 
+		</table><br><br>
 
 	<div class="content-footer">
 		<div class="title-content-footer">
@@ -145,8 +170,9 @@
 		</div>
 
 		<hr class="hr-content-footer"><br>
-			<center>Rumah Sakit Umum Soebandi Jember</center><br>
-		<hr class="hr-content-footer"><br>
+			<center>Rumah Sakit Umum Soebandi Jember</center>
+			<br>
+		<hr class="hr-content-footer">
 	</div>
 
 	<div class="footer">
@@ -154,7 +180,6 @@
 	</div>
 
 </body>
-</html>
 
     <script>
 
@@ -170,3 +195,6 @@
         	})
         })
     </script>
+
+</html>
+

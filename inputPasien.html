@@ -4,9 +4,9 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-	<script
-  src="https://code.jquery.com/jquery-3.4.1.js"></script>
-	<title>Kritik Dan Saran</title>
+	<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+	<script type="text/javascript"></script>
+	<title>Input Pasien</title>
 </head>
 <body>
 
@@ -17,6 +17,20 @@
 
 		<div class="menu">
 				<ul>
+					<li class="sub-menu"><a href="#">Admin</a>
+						<div class="sub-menu-1">
+							<ul>
+								<li><a href="inputPasien.html">Input Pasien</a></li>
+								<li><a href="dataPasien.html">Data Pasien</a></li>
+								<li><a href="inputJadwalDokter.html">Input Jadwal Dokter</a></li>
+								<li><a href="dataJadwalDokter.html">Data Jadwal Dokter</a></li>
+								<li><a href="inputDokter.html">Input Data Dokter</a></li>
+								<li><a href="dataDokter.html">Data Dokter</a></li>
+								<li><a href="inputBerita.html">Input Berita</a></li>
+								<li><a href="dataBerita.html">Data Berita</a></li>
+							</ul>
+						</div>
+					</li>
 					<li><a href="index.html" class="active">Beranda</a></li>
 					<li class="sub-menu"><a href="#">Profil</a>
 							<ul>
@@ -38,8 +52,10 @@
 							</ul>
 					</li>
 					<li><a href="kritikSaran.html">Kritik Dan Saran</a></li>
+					<li><a href="Login.html">Logout</a></li>
 				</ul>
 		</div>
+
 		<div class="title-header">
 			SELAMAT DATANG<br>
 			DI RUMAH SAKIT UMUM DR SOEBANDI KABUPATEN JEMBER<br>
@@ -47,49 +63,92 @@
 		</div>
 	</div>
 
-	<h4><center>INPUT ANTRIAN RSUD DR SOEBANDI</center></h4>
+	<h4><center>INPUT PASIEN RSUD DR SOEBANDI</center></h4>
 		<hr><br>
 
+	<form name="myForm" method="POST" action="dataPasien.html" onsubmit="return validateForm()">
 	<div class="content">
 
 		<table align="center" cellpadding="10">
 			<tr>
 				<td>
-					<label> Nama Anda </label> </td>
+					<label> Kode Pasien </label> </td>
 				<td>
-					<input type="text" name="" class="input" required=""> </td>
+					<input type="number" class="input" placeholder="KDP001" required="" disabled=""></td>
 			</tr>
 
 			<tr>
 				<td>
-					<label> Email Anda </label><br> </td>
+					<label> Nama Pasien </label><br> </td>
 				<td>
-					<input type="text" name=""class="input" required=""><br>
-					<label2 style="font-family:Poppins;font-size:10px;color:#cccccc;letter-spacing: 1px;"><i> Gunakan Email Aktif </i></label2> </td>
+					<input type="text" name="nama" class="input"><br>
 			</tr>
 
 			<tr>
 				<td>
-					<label> Kritik Dan Saran </label> </td>
+					<label> Jenis Kelasmin </label> </td>
 				<td>
-					<textarea required=""></textarea></td>
+					<input type="radio" name="gender"> Laki - Laki <br>	
+					<input type="radio" name="gender"> Perempuan </td>
 			</tr>
 
 			<tr>
 				<td>
-					<label> Kualitas Pelayanan </label> </td>
+					<label> No. Kartu Keluarga </label> </td>
 				<td>
-					<input type="radio" name="sifat" value="a">Buruk<br>
-					<input type="radio" name="sifat" value="b">Cukup<br>
-					<input type="radio" name="sifat" value="c">Cukup Baik<br>
-					<input type="radio" name="sifat" value="d">Baik Sekali<br>
-					<input type="radio" name="sifat" value="e">Sangat Memuaskan<br></td>
+					<input type="number" name="kk" class="input"> </td>
 			</tr>
 
 			<tr>
-				<td></td><td><input type="submit" value="SIMPAN" class="submit"></td>
+				<td>
+					<label> Alamat </label> </td>
+				<td>
+					<textarea name="alamat" ></textarea> </td>	
 			</tr>
-		</table> 
+
+			<tr>
+				<td>
+					<label> No.Telepon </label> </td>
+				<td>
+					<input type="number" name="telp" class="input"> </td>	
+			</tr>
+
+			<tr>
+				<td>
+					<label> Asuransi </label> </td>
+				<td>
+					<input type="number" name="asuransi" class="input"> </td>	
+			</tr>
+
+			<tr>
+				<td colspan="2">
+					<h4><center>PILIH DOKTER</center> <hr> </td></h4>
+			</td>
+
+			<tr>
+				<td>
+					<label> Pilih Spesialis </label> </td>
+				<td>
+					<select class="select" id="Spesialis" required=""> <option class="option">Spesialis Jantung </option>
+														   <option class="option">Spesialis Mata</option>
+														   <option class="option">Spesialis Gigi</option></select> </td>
+			</tr>
+
+			<tr>
+				<td>
+					<label> Pilih Dokter </label><br> </td>
+				<td>
+					<select class="select" id="dokter" required=""> <option class="option">Dr Rizal Akbar A S.pd</option>
+														<option class="option">Dr Sastra Rianto S.pd</option>
+														<option class="option">Dr Jundan Bagus S.pd</option></select> </td>
+					
+			</tr>
+
+			<tr>
+			<td></td><td><input type="submit" value="SIMPAN" class="submit"></td>
+		</tr>
+		</table>				
+	</div>
 
 	<div class="content-footer">
 		<div class="title-content-footer">
@@ -168,5 +227,46 @@
         		$(this).siblings().removeClass('active');	
         		$(this).toggleClass('active');	
         	})
-        })
+        });
+
+        function validateForm() {
+		  var nama = document.forms["myForm"]["nama"].value;
+		  var gender = document.forms["myForm"]["gender"].value;
+		  var kk = document.forms["myForm"]["kk"].value;
+		  var alamat = document.forms["myForm"]["alamat"].value;
+		  var telp = document.forms["myForm"]["telp"].value;
+		  var asuransi = document.forms["myForm"]["asuransi"].value;
+		  
+		  if (nama == "") {
+		    alert("Nama Harus Di Isi");
+		    return false;
+		  }
+
+		  else if (gender == "") {
+		    alert("Jenis Kelamin Harus Di Isi");
+		    return false;
+		  }  
+
+		  else if (kk == "") {
+		    alert("Nomor Kartu keluarga Harus Di Isi");
+		    return false;  
+		  }
+
+		  else if (alamat == "") {
+		    alert("Alamat Harus Di Isi");
+		    return false;
+		  }
+
+		  else if (telp == "") {
+		    alert("No.Telepon Harus Di Isi");
+		    return false;
+		  }
+		  
+		  else if (asuransi == "") {
+		    alert("Asuransi Harus Di Isi");
+		    return false;
+		  }
+
+		}
+
     </script>
